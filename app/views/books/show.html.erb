@@ -1,0 +1,8 @@
+<%= render @book %>
+
+<div class="actions">
+  <%= link_to "Edit this book", edit_book_path(@book), class: "btn btn-edit" %> 
+  <%= link_to "Back to books", books_path, class: "btn btn-secondary" %>
+
+  <%= button_to "Destroy this book", @book, class: "btn btn-delete", method: :delete  %>
+</div>

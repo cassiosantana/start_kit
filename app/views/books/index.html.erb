@@ -1,0 +1,32 @@
+<% content_for :title, "Books" %>
+
+<h1>Books</h1>
+
+<div class="books-container">
+  <table class="books-table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @books.each do |book| %>
+        <tr>
+          <td><%= book.title %></td>
+          <td><%= book.author %></td>
+          <td class="actions">
+            <%= link_to "Show", book, class: "btn btn-show" %>
+            <%= link_to "Edit", edit_book_path(book), class: "btn btn-edit" %>
+            <%= button_to "Delete", book, class: "btn btn-delete", method: :delete %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<div class="actions-container">
+  <%= link_to "New book", new_book_path, class: "btn btn-primary" %>
+</div>

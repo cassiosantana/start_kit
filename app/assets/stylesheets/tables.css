@@ -1,0 +1,56 @@
+.books-container {
+  overflow-x: auto;
+}
+
+.books-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 5px var(--shadow-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.books-table thead {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.books-table th,
+.books-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.books-table tbody tr {
+  transition: background-color 0.3s;
+}
+
+.books-table tbody tr:hover {
+  background-color: var(--light-color);
+}
+
+.books-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.books-table .actions {
+  margin-top: 0;
+  justify-content: flex-end;
+}
+
+.books-table .btn {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d;
+}
+
+.empty-state p {
+  margin-bottom: 1rem;
+}
